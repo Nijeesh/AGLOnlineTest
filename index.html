@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Name categories on Owner's gender</title>  
+  <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loading-overlay">
+    <div class="spin-loader"></div>
+  </div>
+  <h1>Pet detials based on owner's gender</h1>	 
+  <ul id="accordion" class="accordion">
+    <li>
+      <div class="link"><i class="fa"></i>Female<i class="fa fa-chevron-down"></i></div>
+      <ul class="submenu">
+	      <div id="petDetailsFemaleOutput"></div>
+      </ul>
+    </li>
+    <li>   
+      <div class="link"><i class="fa"></i>Male<i class="fa fa-chevron-down"></i></div>
+      <ul class="submenu">
+		  <div id="petDetailsMaleOutput"></div>
+      </ul>
+    </li>
+  </ul>
+  <div id="errorDetails" class="error"></div> 
+   <script id="petDetailsofFemaleOwners" type="text/html">
+	   {{#each petsofFemaleOwners}}
+			<li><a href="#">{{this}}</a></li>
+       {{/each}}
+	   </script>
+	   <script id="petDetailsofMaleOwners" type="text/html">
+       {{#each petsofMaleOwners}}
+			<li><a href="#">{{this}}</a></li>
+       {{/each}}
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+   <script src="js/script.js"></script>	
+</body>
+</html>

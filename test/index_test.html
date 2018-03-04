@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			AGL Online Test
+		</title>
+		<!--jquery and qunit files-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/qunit/qunit-1.12.0.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/qunit/qunit-1.12.0.css">
+		<script type="text/javascript" src="../js/script.js"></script>
+		<script type="text/javascript" src="../js/script_test.js"></script>
+	</head>
+	<body>
+		<!--Test results will go here-->
+		<div id="qunit"></div>		
+		<div id="qunit-fixture"></div>
+ 			<script id="petDetailsofFemaleOwners" type="text/html">
+	   			{{#each petsofFemaleOwners}}
+					<li><a href="#">{{this}}</a></li>
+       				{{/each}}
+	   		</script>
+	   		<script id="petDetailsofMaleOwners" type="text/html">
+       				{{#each petsofMaleOwners}}
+					<li><a href="#">{{this}}</a></li>
+       				{{/each}}
+	 		</script>
+    	    <div class="loading-overlay">
+				<div class="spin-loader"></div>
+  			</div>		
+	</body>
+</html>
